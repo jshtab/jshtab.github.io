@@ -9,135 +9,15 @@
     <link rel="stylesheet" href="noto-serif/noto-serif.css">
     <link rel="stylesheet" href="fontawesome-web/css/all.min.css">
     <link rel="stylesheet" href="fontawesome-web/css/fontawesome.min.css">
-    <style>
-        body {
-            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-            margin: 1em;
-            color: #444;
-            background-color: #fcfcf7;
-            display: grid;
-            justify-items: center;
-            grid-template-areas:
-                ".      header ."
-                ".      main   ."
-                "footer footer footer";
-        }
-
-        header {
-            grid-area: header;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-self: stretch;
-            gap: 1em;
-        }
-
-        footer {
-            grid-area: footer;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        main {
-            grid-area: main;
-            max-width: 640px;
-            border-top: 1px solid grey;
-            padding-top: 1.75em;
-            margin-top: 1.75em;
-        }
-
-        nav {
-            display: flex;
-            flex-direction: row;
-            gap: 1em;
-        }
-
-        .thought {
-
-            display: grid;
-            grid-template-areas:
-                "title time"
-                "text text"
-                "more .";
-            grid-template-columns: 1fr auto;
-            padding: 1em;
-        }
-
-        .thought :is(h1, h2, h3, h4, h5, h6) {
-            grid-area: title;
-            margin: 0;
-        }
-
-        .thought .more {
-            grid-area: more;
-            align-self: baseline;
-            justify-self: left;
-        }
-
-        .thought time {
-            grid-area: time;
-            align-self: center;
-            justify-self: right;
-            font-style: italic;
-        }
-
-        .thought:hover {
-            background-color: #f5f5ed;
-        }
-
-        .thought * {
-            grid-area: text;
-        }
-
-        #recent-thoughts {
-            padding-top: 1em;
-        }
-
-        #recent-thoughts ul {
-            list-style: none;
-            padding-inline: 1em;
-        }
-
-        .skip-nav {
-            overflow: hidden;
-            position: absolute;
-            top: auto;
-            width: 1px;
-            height: 1px;
-            left: -200vw;
-        }
-
-        .skip-nav:focus {
-            position: static;
-            width: auto;
-            height: auto;
-        }
-
-        #contacts {
-            display: flex;
-            flex-direction: row;
-            gap: 1em;
-        }
-
-        .logo {
-            display: grid;
-            line-height: 1.4em;
-        }
-
-        .logo-text {
-            font-size: 1.5em;
-            font-weight: bolder;
-        }
-    </style>
+    <link rel="stylesheet" href="main.css">
 </head>
 
 <body>
     <a class="skip-nav" href="#main">Skip To Content</a>
     <header aria-label="website header">
-        <span class="logo">
-            <span class='logo-text' style="padding-right: 3ch;">Disorganized</span>
-            <span class='logo-text' style="justify-self: right;">Thoughts</span>
+        <span class="logo-text logo">
+            <span class='logo-text-left'>Disorganized</span>
+            <span class='logo-text-right'>Thoughts</span>
         </span>
         <nav>
             <a href="/">Home</a>
@@ -147,30 +27,36 @@
         </nav>
     </header>
     <main aria-label="main content">
-        <div id="main">
+        <hr>
+        <p id="main">
             Welcome to my bin of questions, half-baked ideas, and interesting things that show up while I'm tinkering
             with software, websites, or whatever.
             Feel free to <a href="contact">contact me</a> about anything on here, and check out some <a
                 href="projects">of my recent projects</a> while you're at it.
-        </div>
-        <section id="recent-thoughts">
+        </p>
+        <section id="recent-thoughts" class="article-list">
             <h1>Recent Thoughts</h1>
             <ul role="list">
                 <li>
                     <article class="thought">
-                        <h2>Lorem ipsum dolor sit amet</h2>
-                        <time datetime="2023-02-14">2023 Feb 14</time>
+                        <header>
+                            <h2>Lorem ipsum dolor sit amet</h2>
+                            <time datetime="2023-02-14">2023 Feb 14</time>
+                        </header>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis reprehenderit molestiae
                             numquam eligendi excepturi sunt nesciunt assumenda quas impedit? Adipisci earum culpa a
                             tempore doloremque deserunt incidunt magni eum laudantium.</p>
-                        <a class="more" href="/article">Read more.</a>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate corporis qui quasi tempore voluptates saepe minima, debitis eveniet quis ipsam ratione temporibus accusantium repellendus eligendi sit, vitae illum modi ipsa.</p>
+                        <a class="see-more" href="/article">Read more.</a>
                     </article>
                 </li>
                 <li>
                     <article class="thought">
-                        <h2>Lorem ipsum dolor sit amet</h2>
-                        <time datetime="2023-02-14">2023 Feb 14</time>
-                        <a class="more" href="/article">Read more.</a>
+                        <header>
+                            <h2>Lorem ipsum dolor sit amet</h2>
+                            <time datetime="2023-02-14">2023 Feb 14</time>
+                        </header>
+                        <a class="see-more" href="/article">Read more.</a>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus voluptatibus eius, perferendis
                             ratione molestias porro, nam odit nesciunt aut vero debitis? Illo eaque possimus amet quas
                             ipsa exercitationem quos molestias?</p>
@@ -183,7 +69,7 @@
         <p>
             Copyright &copy; 2023 Jacob Shtabnoy. All rights reserved.
         </p>
-        <div id="contacts" aria-label="social accounts and contact information">
+        <div id="contacts">
             <a href="https://github.com/jshtab">
                 <i class="fab fa-github" aria-hidden="true" title="GitHub"></i>
                 <span class="fa-sr-only">GitHub</span>

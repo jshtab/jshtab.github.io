@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disorganized Thoughts</title>
+    {{ $styles := resources.Get "main.css" -}}
+    <link rel="stylesheet" href="{{ $styles.RelPermalink }}">
+    <link rel="stylesheet" href="fontawesome-web/css/solid.min.css">
+    <link rel="stylesheet" href="fontawesome-web/css/brands.min.css">
+    <link rel="stylesheet" href="fontawesome-web/css/fontawesome.min.css">
+</head>
+<body>
+    <a class="skip-nav" href="#main">Skip To Content</a>
+    <header aria-label="website header">
+        <span class="logo-text logo">
+            <span class='logo-text-left'>Disorganized</span>
+            <span class='logo-text-right'>Thoughts</span>
+        </span>
+        {{ with .Site.Menus.main -}}
+        <nav>
+            {{- range . }}
+            <a href="{{ .URL }}">{{ .Title }}</a>
+            {{- end }}
+        </nav>
+        {{- end}}
+    </header>
+    <main>
+        <hr>
+        {{- block "main" . }}
+        {{- end }}
+        <hr>
+    </main>
+    <footer>
+        <p>{{ .Site.Copyright }}</p>
+        {{- with .Site.Menus.socials}}
+        <div id="contacts">
+            {{- range . }}
+            <a href="{{ .URL }}" title="{{ .Title }}">
+                {{- if .Params.icon }}
+                <i class="{{ .Params.icon }}" aria-hidden="true" title="{{ .Title }}"></i>
+                {{- end }}
+                <span class="fa-sr-only">{{ .Title }}</span>
+            </a>
+            {{end}}
+        </div>
+        {{end}}
+    </footer>
+</body>
+</html>

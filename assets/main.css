@@ -1,0 +1,165 @@
+/* Disorganized Thoughts page layout styles. */
+
+:host, :root {
+    --app-fg: #444;
+    --app-bg: #fcfcf7;
+    --app-font: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    --app-max-width: 640px;
+}
+
+hr {
+    margin-block: 2em;
+}
+
+section {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+/* Page color */
+
+body {
+    font-size: var(--app-font);
+    color: var(--app-fg);
+    background-color: var(--app-bg);
+}
+
+
+/* Main page layout */
+
+body>header {
+    grid-area: body-header;
+}
+
+body>main {
+    grid-area: body-main;
+    max-width: var(--app-max-width);
+}
+
+body>footer {
+    grid-area: body-footer;
+}
+
+body {
+    grid-template-areas:
+        "body-header"
+        "body-main"
+        "body-footer";
+    display: grid;
+    justify-content: center;
+}
+
+/* Header layout */
+
+body>header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+}
+
+body>header nav {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+}
+
+/* Footer layout */
+
+body>footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contacts {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+}
+
+/* Article list layout */
+
+.article-list {
+    --app-article-hover-shade: #f5f5ed;
+}
+
+.article-list:not(:has(ul,ol)) {
+    display: flex;
+    flex-direction: column;
+}
+
+.article-list ul, .article-list ol {
+    list-style: none;
+    padding-inline: 0;
+}
+
+.article-list article:hover {
+    background-color: var(--app-article-hover-shade);
+}
+
+.article-list article {
+    padding: 1em;
+}
+
+article header :is(h1,h2,h3,h4,h5,h6) {
+    grid-area: header;
+    margin: 0;
+}
+
+article header time {
+    grid-area: time;
+}
+
+@media (min-width: 640px) {
+    article header {
+        display: grid;
+        grid-template-areas:
+            "header time";
+    }
+
+    article header time {
+        justify-self: right;
+        align-self: center;
+    }
+}
+
+/* Accessibility nav skip */
+
+.skip-nav {
+    overflow: hidden;
+    position: absolute;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    left: -200vw;
+}
+
+.skip-nav:focus {
+    position: absolute;
+    width: auto;
+    height: auto;
+    top: 1em;
+    left: 1em;
+    border: 1px red solid;
+}
+
+/* Logo layout */
+
+.logo {
+    display: grid;
+    /* line-height: 1.2em; */
+}
+
+.logo-text {
+    font-size: 1.5em;
+    font-weight: bolder;
+}
+
+.logo-text-left {
+    padding-right: 3ch;
+}
+
+.logo-text-right {
+    justify-self: right;
+}

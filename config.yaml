@@ -2,3 +2,31 @@ title: Disorganized Thoughts
 baseUrl: http://jshtab.github.io/
 copyright: Copyright 2023, Jacob Shtabnoy
 defaultContentLanguage: en
+
+menu:
+  main:
+  - url: /
+    identifier: main
+    weight: 1
+    title: Main
+  - url: /thought
+    identifier: thoughts
+    weight: 2
+    title: Thoughts
+  - url: /projects
+    weight: 3
+    identifier: projects
+    title: Projects
+  socials:
+  - url: https://github.com/jshtab
+    title: GitHub
+    params:
+      icon: fab fa-github
+  - url: 'contact'
+    title: E-Mail
+    params:
+      icon: fa-solid fa-envelope
+  - url: https://www.linkedin.com/in/jacob-shtabnoy-a9077624b
+    title: LinkedIn
+    params:
+      icon: fab fa-linkedin

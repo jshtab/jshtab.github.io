@@ -1,0 +1,21 @@
+{{ define "main" }}
+    <h1>{{.Title}}</h1>
+    {{ .Content }}
+
+    <section class="article-list">
+        <ul>
+    {{- range .Pages }}
+            <li>
+                <article>
+                    <header>
+                        <h2>{{.Title}}</h2>
+                        {{ with .Date }}<time datetime='{{ .Format "2006-02-01" }}'>{{ .Format "2006 Jan 2" }}</time>{{ end }}
+                    </header>
+                    {{ .Summary | markdownify }}
+                    {{- if .Truncated }}<a class="see-more" href="{{.Permalink}}">Read more&hellip;</a>{{end}}
+                </article>
+            </li>
+        {{end -}}
+        </ul>
+    </section>
+{{ end }}
