@@ -4,29 +4,19 @@ copyright: Copyright 2023, Jacob Shtabnoy
 defaultContentLanguage: en
 
 menu:
-  main:
-  - url: /
-    identifier: main
-    weight: 1
-    title: Main
-  - url: /thought
-    identifier: thoughts
-    weight: 2
-    title: Thoughts
-  - url: /projects
-    weight: 3
-    identifier: projects
-    title: Projects
   socials:
   - url: https://github.com/jshtab
-    title: GitHub
+    name: GitHub
     params:
-      icon: fab fa-github
-  - url: 'contact'
-    title: E-Mail
+      icon: fa-svg/brands/github.svg
+    weight: 1
+  - url: '/contact'
+    name: E-Mail
     params:
-      icon: fa-solid fa-envelope
+      icon: fa-svg/solid/envelope.svg
+    weight: 2
   - url: https://www.linkedin.com/in/jacob-shtabnoy-a9077624b
-    title: LinkedIn
+    name: LinkedIn
+    weight: 3
     params:
-      icon: fab fa-linkedin
+      icon: fa-svg/brands/linkedin.svg

@@ -1,3 +1,13 @@
 {{ define "main" }}
-    {{ .Content }}
+    <article>
+        <header>
+            <small>
+                <p>
+                {{- with .CurrentSection }}<a title="Type of article" href="{{.Permalink}}">{{.Name | singularize}}</a> {{ end }}
+                {{- with .Date }} from <time datetime='{{ .Format "2006-02-01" }}'>{{ .Format "2006 Jan 2" }}</time>{{ end }}
+                </p>
+            </small>
+        </header>
+        {{ .Content }}
+    </article>
 {{ end }}

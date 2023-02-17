@@ -1,0 +1,62 @@
+:host, :root {
+    --app-fg: #444;
+    --app-bg: #fcfcf7;
+    --app-font: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    --app-max-width: 640px;
+}
+
+
+body {
+    font-family: var(--app-font);
+    color: var(--app-fg);
+    background-color: var(--app-bg);
+    max-width: 80ch;
+    margin: 0 auto;
+    padding: 2em;
+}
+
+body>header {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.5em;
+    margin-bottom: 2em;
+}
+
+body>footer {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    padding-top: 2em;
+}
+
+.site-title {
+    font-size: 20pt;
+    text-decoration: none;
+    color: #9b4141;
+}
+
+#contacts a {
+    text-decoration: none;
+    padding: 0 0.2em;
+}
+
+
+.skip-nav {
+    overflow: hidden;
+    position: absolute;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    left: -200vw;
+}
+
+.skip-nav:focus {
+    position: absolute;
+    width: auto;
+    height: auto;
+    top: 1em;
+    left: 1em;
+    border: 1px red solid;
+}

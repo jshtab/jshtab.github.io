@@ -19,7 +19,7 @@ section {
 /* Page color */
 
 body {
-    font-size: var(--app-font);
+    font-family: var(--app-font);
     color: var(--app-fg);
     background-color: var(--app-bg);
 }

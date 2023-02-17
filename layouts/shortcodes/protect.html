@@ -1,0 +1,9 @@
+{{$org := (.Get 0)}}
+{{$split := (split $org "")}}
+{{$styles := (delimit (shuffle (apply $split "partial" "protect-css.html" ".") | uniq) "\n")}}
+{{$targetStylePath := (printf "%s.css" (md5 $org))}}
+{{$stylesResource := $styles | resources.FromString $targetStylePath}}
+<link rel="stylesheet" href="{{$stylesResource.Permalink}}" type="text/css">
+{{- range $split -}}
+<span class="p{{md5 .}}"></span>
+{{- end -}}

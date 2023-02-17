@@ -5,46 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Disorganized Thoughts</title>
-    {{ $styles := resources.Get "main.css" -}}
+    {{ $styles := resources.Get "next_main.css" -}}
     <link rel="stylesheet" href="{{ $styles.RelPermalink }}">
-    <link rel="stylesheet" href="fontawesome-web/css/solid.min.css">
-    <link rel="stylesheet" href="fontawesome-web/css/brands.min.css">
-    <link rel="stylesheet" href="fontawesome-web/css/fontawesome.min.css">
 </head>
 <body>
     <a class="skip-nav" href="#main">Skip To Content</a>
-    <header aria-label="website header">
-        <span class="logo-text logo">
-            <span class='logo-text-left'>Disorganized</span>
-            <span class='logo-text-right'>Thoughts</span>
-        </span>
-        {{ with .Site.Menus.main -}}
-        <nav>
-            {{- range . }}
-            <a href="{{ .URL }}">{{ .Title }}</a>
-            {{- end }}
-        </nav>
-        {{- end}}
+    <header>
+        <a class="site-title" href="/">Disorganized Thoughts</a>
     </header>
     <main>
-        <hr>
         {{- block "main" . }}
         {{- end }}
-        <hr>
     </main>
     <footer>
-        <p>{{ .Site.Copyright }}</p>
+        <small>
+            <p>&copy; 2023, Jacob Shtabnoy.<br/><a href="/license">Some rights reserved</a>.</p>
+        </small>
         {{- with .Site.Menus.socials}}
-        <div id="contacts">
+        <address id="contacts">
             {{- range . }}
             <a href="{{ .URL }}" title="{{ .Title }}">
                 {{- if .Params.icon }}
-                <i class="{{ .Params.icon }}" aria-hidden="true" title="{{ .Title }}"></i>
+                {{$image := resources.Get .Params.icon}}
+                {{- if $image}}<img src="{{ $image.Permalink }}" width="24px" height="24px" alt="{{ .Name }}"></img> {{end}}
                 {{- end }}
-                <span class="fa-sr-only">{{ .Title }}</span>
+                <!-- <span class="fa-sr-only">{{ .Name }}</span> -->
             </a>
             {{end}}
-        </div>
+        </address>
         {{end}}
     </footer>
 </body>
