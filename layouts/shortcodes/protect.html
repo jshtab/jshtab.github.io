@@ -1,4 +1,4 @@
-{{$org := (.Get 0)}}
+{{$org := (delimit (slice (.Get 3) (.Get 0) (.Get 2) (.Get 4) (.Get 1)) "")}}
 {{$split := (split $org "")}}
 {{$styles := (delimit (shuffle (apply $split "partial" "protect-css.html" ".") | uniq) "\n")}}
 {{$targetStylePath := (printf "%s.css" (md5 $org))}}
