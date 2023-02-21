@@ -37,6 +37,10 @@ body>footer {
     color: #9b4141;
 }
 
+.site-title:hover {
+    color: #bd9494;
+}
+
 #contacts a {
     text-decoration: none;
     padding: 0 0.2em;

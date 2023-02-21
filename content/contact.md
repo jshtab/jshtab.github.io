@@ -1,5 +1,6 @@
 ---
 title: Contact
+description: How to send me messages about my work, the website, or anything really.
 ---
 
 # Contact Me
@@ -9,7 +10,8 @@ title: Contact
 
 For anything else, email is the way to go. Send mail to: {{< protect "jshtabb at gmail com" >}}
 
-The extra 'b' at the end is intentional. Yes, you can't select it. It is to stop robots.
+The extra 'b' at the end is intentional. If you can't see the email address, either switch to a recent graphical web browser, or just get my email address from [GitHub].
 
 [LinkedIn]: https://www.linkedin.com/in/jacob-shtabnoy-a9077624b
+[GitHub]: https://github.com/jshtab
 

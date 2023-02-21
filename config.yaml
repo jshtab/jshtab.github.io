@@ -3,6 +3,10 @@ baseUrl: http://jshtab.github.io/
 copyright: Copyright 2023, Jacob Shtabnoy
 defaultContentLanguage: en
 
+params:
+  description: An unordered bin containing questions, half-baked ideas and the disorganized thoughts of a young software developer.
+
+
 menu:
   socials:
   - url: https://github.com/jshtab
