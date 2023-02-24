@@ -64,3 +64,9 @@ body>footer {
     left: 1em;
     border: 1px red solid;
 }
+
+.highlight pre {
+    padding: 1em;
+    overflow: hidden;
+    border-radius: 0.5em;
+}
