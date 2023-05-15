@@ -31,18 +31,23 @@ X-GNOME-Autostart-enabled=true
 
 On the next login, the remote share should be available in the Files app. To add more shares, create more desktop files in the autostart directory.
 
+## Limitations
+
+If there's no internet when logging in, the drives won't automatically mount if the internet comes back. If the machine is consistently connected to the internet, this usually isn't a problem, but it's important for laptops that move around frequently.
+
 ## Troubleshooting
 
 Check these common issues, in order of likelihood. If one step doesn't correct the problem, move on to the next. Remember to restart the GNOME session by logging in and out to test if it worked.
 
-1. Credentials must be in the keyring. Mount manually using the Files app. If it prompts you for a login, save the login. That should put it on the keyring.
-2. Open up a terminal and run *gio*. If that command is not there then *glib2* is missing.
-3. Check the URL of the server. Running *gio mount $SHARE_URL_HERE* should mount the share if it's valid.
-4. Not all systems use the default autostart directory. Running *systemd-path user-configuration* or *echo $XDG_CONFIG_HOME* should print where the XDG configuration folder is. If it does, create the 'autostart' folder there and move the desktop file. If it doesn't, your system might not support XDG Autostart. See [this ArchWiki article][xdg-archwiki] for more.
+1. Ensure the computer is connected to the internet.
+2. Credentials must be in the keyring. Mount manually using the Files app. If it prompts you for a login, save the login. That should put it on the keyring.
+3. Open up a terminal and run *gio*. If that command is not there then *glib2* is missing.
+4. Check the URL of the server. Running *gio mount $SHARE_URL_HERE* should mount the share if it's valid.
+5. Not all systems use the default autostart directory. Running *systemd-path user-configuration* or *echo $XDG_CONFIG_HOME* should print where the XDG configuration folder is. If it does, move the *autostart* folder there. If it doesn't, your system might not support XDG Autostart. See [this ArchWiki article][xdg-archwiki] for more.
 
 ## Acknowledgements
 
-Special thanks to [Sebastian Keller][skeller] on the GNOME Matrix for [pointing this method][skeller-matrix] out to me. Somehow, this flew under the radar. Most results from searching online turn up complicated instructions for Samba. But, GNOME doesn't need Samba to connect to remote servers, it uses [Gvfs][gvfs] instead.
+Special thanks to [Sebastian Keller][skeller] on the GNOME Matrix for [pointing this method][skeller-matrix] out to me. Somehow, this flew under my radar. Most results from searching online turn up complicated instructions for Samba. But, GNOME doesn't need Samba to connect to remote servers, it uses [Gvfs][gvfs] instead.
 
 [gvfs]: https://wiki.gnome.org/Projects/gvfs
 [gvfs-protos]: https://wiki.gnome.org/Projects/gvfs/schemes
