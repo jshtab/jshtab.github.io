@@ -18,7 +18,7 @@ tags:
 
 While analyzing applications in the wild, you might come across a Python application bundled with [cx_Freeze]. It creates isolated, portable Python applications by including copies of everything the code needs. The final application is a ready-to-go .exe file that is attractive to typical users.
 
-While cx_Freeze is used to package legitimate software, it and similar tools (like [PyInstaller]) are also used for disguising malware as legitimate executables. Knowing how to get at the actual Python code out of them means finding out more, and faster.
+While cx_Freeze is used to package legitimate software, it and similar tools (like [PyInstaller]) are also used for disguising malware as legitimate executables. Recognizing when an application is using cx_Freeze can save valuable time when reverse engineering software.
 
 [cx_Freeze]: https://cx-freeze.readthedocs.io/en/latest/
 [PyInstaller]: https://pyinstaller.org/en/stable/
