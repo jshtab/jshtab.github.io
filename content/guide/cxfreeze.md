@@ -1,7 +1,8 @@
 ---
 title: "Exploring cx_Freeze Applications"
 date: 2023-05-19
-description: 
+description: >
+  Python-To-EXE tools build clean apps but also get misused to disguise malware and hide from anti-viruses. Learn how to break apart cx_Freeze applications and jump straight into analyzing them.
 tags:
  - cx_Freeze
  - reversing
@@ -11,7 +12,6 @@ tags:
  - pyc
  - marshal
  - malware analysis
-draft: true
 ---
 
 # Exploring cx_Freeze Applications
@@ -94,7 +94,7 @@ If that example above looks unfamiliar, welcome to Python disassembly. Explainin
 
 Specific technical information, like opcode documentation for specific versions of Python exist in that version's [manual][PyManual].
 
-[PyManual]: https://docs.python.org/3/library/dis.html
+[PyManual]: https://docs.python.org/3/library/dis.html#python-bytecode-instructions
 
 ## Further reading
 

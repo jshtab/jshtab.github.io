@@ -10,4 +10,5 @@ Feel free to [contact me](./contact) about anything on here, and check out some 
 
 Anything that I couldn't find in a few seconds online end up here once I solve them. These are some recent / important guides, you can find the rest [here](./guide/).
 
+- [Exploring cx_Freeze Applications](./guide/cxfreeze)
 - [Automatically mounting remote shares in GNOME](./guide/gvfs-autmount)
