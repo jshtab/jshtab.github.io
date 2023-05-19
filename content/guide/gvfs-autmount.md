@@ -2,6 +2,14 @@
 title: "Automatically mounting remote shares in GNOME"
 description: >
     Samba sucks, you don't need it. There's a good chance you don't need to install anything to follow this guide. Just a recent-ish version of GNOME and a text editor.
+tags:
+ - linux
+ - gnome
+ - smb
+ - automount
+ - mounting
+ - samba
+ - fstab
 date: 2023-02-24T15:36:21-05:00
 ---
 
