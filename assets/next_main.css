@@ -67,6 +67,6 @@ body>footer {
 
 .highlight pre {
     padding: 1em;
-    overflow: hidden;
+    overflow: scroll;
     border-radius: 0.5em;
 }
