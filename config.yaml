@@ -19,7 +19,7 @@ menu:
     params:
       icon: fa-svg/solid/envelope.svg
     weight: 2
-  - url: https://www.linkedin.com/in/jacob-shtabnoy-a9077624b
+  - url: https://www.linkedin.com/in/jshtab
     name: LinkedIn
     weight: 3
     params:

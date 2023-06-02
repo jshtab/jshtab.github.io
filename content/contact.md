@@ -12,6 +12,6 @@ For anything else, email is the way to go. Send mail to: {{< protect "tabb a" "i
 
 The extra 'b' at the end is intentional. If you can't see the email address, either switch to a recent graphical web browser, or just get my email address from [GitHub].
 
-[LinkedIn]: https://www.linkedin.com/in/jacob-shtabnoy-a9077624b
+[LinkedIn]: https://www.linkedin.com/in/jshtab
 [GitHub]: https://github.com/jshtab
 
