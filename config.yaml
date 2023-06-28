@@ -6,6 +6,9 @@ defaultContentLanguage: en
 params:
   description: An unordered bin containing questions, half-baked ideas and the disorganized thoughts of a young software developer.
 
+markup:
+  highlight:
+    style: witchhazel
 
 menu:
   socials:
