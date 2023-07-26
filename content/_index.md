@@ -15,4 +15,8 @@ These are some recent / important guides that I couldn't find elsewhere.
 - [Exploring cx_Freeze Applications](./guide/cxfreeze)
 - [Automatically mounting remote shares in GNOME](./guide/gvfs-autmount)
 
-<!-- [See all Guides](./guide/) -->
+## Projects
+
+Some projects that I'm at least slightly proud of:
+
+- [Weather Monitor](./project/weather-kiosk/)

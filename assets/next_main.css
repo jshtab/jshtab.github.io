@@ -74,3 +74,7 @@ body>footer {
 li {
     margin-bottom: 0.4em;
 }
+
+img {
+    max-width: 100%;
+}
