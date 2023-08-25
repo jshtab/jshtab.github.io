@@ -1,7 +1,6 @@
 ---
 title: "Weather Monitor"
 date: 2023-07-26
-draft: true
 ---
 
 # Weather Monitor
