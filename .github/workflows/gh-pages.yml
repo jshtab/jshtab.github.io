@@ -1,6 +1,4 @@
-# GitHub Pages Deployment
-
-name: GitHub Pages
+name: Compile Hugo for GH Pages
 
 on:
   push:
@@ -12,6 +10,10 @@ jobs:
     permissions:
       pages: write
       id-token: write
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
     - uses: actions/checkout@v3
@@ -25,4 +27,4 @@ jobs:
       with:
         path: public/
     - name: Deploy GitHub Pages site
-      uses: actions/deploy-pages@v1.2.4
+      uses: actions/deploy-pages@v4
