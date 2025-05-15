@@ -14,16 +14,18 @@
 <body>
     <!-- <a class="skip-nav" href="#main">Skip To Content</a> -->
     <header>
-        <a class="site-title" href="/">Disorganized Thoughts</a>
-    </header>
-    <main>
-        {{- block "main" . }}
-        {{- end }}
-    </main>
-    <footer>
-        <small>
-            <p>&copy; 2023, Jacob Shtabnoy.<br/><a href="/license">Some rights reserved</a>.</p>
-        </small>
+        <a class="site-title" href="/" title="Home">{{.Site.Title}}</a>
+        
+        {{- with .Site.Menus.main}}
+            <nav>
+                <ul>
+                {{- range .}}
+                    <li><a href="{{.URL}}" title="{{.Title}}">{{.Name}}</a></li>
+                {{end}}
+                </ul>
+            </nav>
+        {{- end -}}
+
         {{- with .Site.Menus.socials}}
         <address id="contacts">
             {{- range . }}
@@ -36,7 +38,16 @@
             </a>
             {{end}}
         </address>
-        {{end}}
+        {{- end -}}
+    </header>
+    <main>
+        {{- block "main" . }}
+        {{- end }}
+    </main>
+    <footer>
+        <small>
+            <p>&copy; {{.Site.Copyright}}<br/><a href="/license">Some rights reserved</a>.</p>
+        </small>
     </footer>
 </body>
 </html>

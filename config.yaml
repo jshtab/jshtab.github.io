@@ -1,14 +1,21 @@
-title: Disorganized Thoughts
+title: Jacob Shtabnoy
 baseUrl: https://jshtab.github.io/
-copyright: Copyright 2023, Jacob Shtabnoy
+copyright: 2023, 2025 Jacob Shtabnoy
 defaultContentLanguage: en
 
 params:
-  description: An unordered bin containing questions, half-baked ideas and the disorganized thoughts of a young software developer.
+  description: Personal blog of Jacob Shtabnoy.
 
 markup:
   highlight:
     style: witchhazel
+  goldmark:
+    renderer:
+      unsafe: true
+    extensions:
+      extras:
+        superscript:
+          enable: true
 
 menu:
   socials:
@@ -27,3 +34,10 @@ menu:
     weight: 3
     params:
       icon: fa-svg/brands/linkedin.svg
+  main:
+  - url: '/guide'
+    name: Guides
+  # - url: '/project'
+  #   name: Projects
+  - url: '/blog'
+    name: Blog

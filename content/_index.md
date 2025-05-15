@@ -1,22 +1,11 @@
 ---
-title: Disorganized Thoughts
-description: >
-    My bin of disorganized thoughts, half-baked ideas, and interesting things that show up while I'm tinkering with software, websites, or anything compute related.
+title: Jacob Shtabnoy
 ---
 
-Welcome to my bin of disorganized thoughts, half-baked ideas, and interesting things that show up while I'm tinkering with software, websites, or just about anything computer related.
+I'm a passionate software developer with mostly practical experience in full-stack web development, navigating ancient piles of spaghetti, and building quick-'n-dirty automation when needed. I also contribute to open-source video games and administer Linux<sup>&reg;</sup> systems for fun.
 
-Feel free to [contact me](./contact), check out my [recent projects](./project), and find socials at the bottom of the page.
+I am looking for work in the Fredericksburg/Stafford area. My resum&eacute; and references are available by [e-mail](/contact).
 
-## Guides
+This page is a work-in-progress as of May 2025.
 
-These are some recent / important guides that I couldn't find elsewhere.
-
-- [Exploring cx_Freeze Applications](./guide/cxfreeze)
-- [Automatically mounting remote shares in GNOME](./guide/gvfs-autmount)
-
-## Projects
-
-Some projects that I'm at least slightly proud of:
-
-- [Weather Monitor](./project/weather-kiosk/)
+[RESUME]: /resume.pdf

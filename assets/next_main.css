@@ -16,11 +16,39 @@ body {
 }
 
 body>header {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: baseline;
     gap: 0.5em;
     margin-bottom: 2em;
+}
+
+body>header address img {
+    vertical-align: text-bottom;
+}
+
+body>header address {
+    justify-self: right;
+}
+
+body>header .title {
+    justify-self: left;
+}
+
+body>header nav {
+    justify-self: center;
+}
+
+body>header nav ul {
+    padding: 0;
+}
+
+body>header nav li {
+    display: inline;
+}
+
+body>header nav li+li::before {
+    content: " - "
 }
 
 body>footer {
