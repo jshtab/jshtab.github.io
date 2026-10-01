@@ -2,13 +2,10 @@
 <article>
     {{ .Content }}
 </article>
-<aside>
-    <ul>
-        {{- range .Pages }}
-        <li>
-            <a href="{{.Permalink}}">{{.Title}}</a>{{ with .Date }} from <time datetime='{{ .Format "2006-02-01" }}'>{{.Format "2006 Jan 2" }}</time>{{ end }}
-        </li>
-        {{end -}}
-    </ul>
-</aside>
+{{- range .Pages }}
+  <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+  <div class="summary">
+    {{ .Summary }}
+  </div>
+{{end -}}
 {{ end }}

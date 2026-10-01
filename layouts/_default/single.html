@@ -1,6 +1,7 @@
 {{ define "main" }}
     <article>
         <header>
+            <h1>{{ .Title }}</h1>
             <small>
                 <p>
                 {{- with .CurrentSection }}{{ if ne . .Site.Home }}<a title="Type of article" href="{{.Permalink}}">{{.Name | singularize}}</a> {{ end }}{{ end }}

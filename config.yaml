@@ -1,6 +1,6 @@
 title: Jacob Shtabnoy
 baseUrl: https://jshtab.github.io/
-copyright: 2023, 2025 Jacob Shtabnoy
+copyright: 2023, 2025-2026 Jacob Shtabnoy
 defaultContentLanguage: en
 
 params:
@@ -35,9 +35,7 @@ menu:
     params:
       icon: fa-svg/brands/linkedin.svg
   main:
-  - url: '/guide'
-    name: Guides
-  # - url: '/project'
-  #   name: Projects
-  - url: '/blog'
-    name: Blog
+  - url: '/article'
+    name: article
+  - url: '/contact'
+    name: contact

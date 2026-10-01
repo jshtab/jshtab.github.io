@@ -1,5 +1,0 @@
----
-title: Projects
----
-
-# My Projects

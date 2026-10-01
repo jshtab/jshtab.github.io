@@ -1,7 +1,7 @@
 ---
-title: "Automatically mounting remote shares in GNOME"
+title: "Automatically mounting shares in GNOME"
 description: >
-    Samba sucks, you don't need it. There's a good chance you don't need to install anything to follow this guide. Just a recent-ish version of GNOME and a text editor.
+    Hate wrangling Samba to automount SMB shares on Linux? If you're using GNOME, you can use Gvfs instead!
 tags:
  - linux
  - gnome
@@ -12,8 +12,6 @@ tags:
  - fstab
 date: 2023-02-24T15:36:21-05:00
 ---
-
-# Automatically mounting remote shares in GNOME
 
 Moving between many devices and having to find and open remote shares in GNOME is annoying. Using built-in GNOME tools like *gio*, it's possible to automatically mount network shares when you log in **without** wrangling with Samba or fstab. It works for [many protocols][gvfs-protos], including *smb*, *webdav*, and *ftp*.
 <!--more-->
