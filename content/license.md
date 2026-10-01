@@ -1,8 +1,6 @@
 ---
-title: Licenses
+title: License Information
 ---
-
-# License Information
 
 This website is made available under the [CC-BY-NC-SA 4.0] license.
 
